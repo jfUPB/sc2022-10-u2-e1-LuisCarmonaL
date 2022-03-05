@@ -36,20 +36,21 @@ void printArray(struct array *parr)
 
 void getArray(struct array *parr)
 {
-int numeroUsuario = 0;
+int numeroUsuario;
 
 scanf ("%d",&numeroUsuario);
 parr->size = numeroUsuario;
 
-int conNumero [numeroUsuario];
+int conNumero[numeroUsuario];
 parr->pdata = malloc(sizeof(int)*parr->size);
 
 for(int i = 0; i<numeroUsuario;i++){
-    int num
-    scanf("%d", &num);
+    int num;
+    scanf("%d",&num);
     conNumero[i]=num;
     parr->pdata[i]=conNumero[i];
     
+ }
 }
 
 void arrayCommon(struct array *arrIn1, struct array *arrIn2, struct array *arrOut)

@@ -39,10 +39,11 @@ void getArray(struct array *parr)
 int numeroUsuario = 0;
 
 scanf ("%d",&numeroUsuario);
-
+parr->size = numeroUsuario;
 
 //pasar los caracteres a enteros(Ej 7)
-int conNumero = scanf(parr->size, "%d", &numeroUsuario);
+int conNumero [numeroUsuario];
+parr->pdata = malloc(sizeof(int)*parr->size);
 
 //Ciclo for(Ej 13)
 for(int i = 0; i < numeroUsuario; i++){

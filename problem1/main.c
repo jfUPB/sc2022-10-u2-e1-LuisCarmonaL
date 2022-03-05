@@ -37,11 +37,20 @@ void printArray(struct array *parr)
 void getArray(struct array *parr)
 {
 int numeroUsuario = 0;
+
 scanf ("%d",&numeroUsuario);
 
+
 //pasar los caracteres a enteros(Ej 7)
-int conNumero = sscanf(parr->size, "%d", &numeroUsuario);
+int conNumero = scanf(parr->size, "%d", &numeroUsuario);
+
 //Ciclo for(Ej 13)
+for(int i = 0; i < numeroUsuario; i++){
+    int num
+    scanf("%d", &num[i]);
+    conNumero[i]=num;
+    parr->pdata[i]=conNumero[i];
+    
 }
 
 void arrayCommon(struct array *arrIn1, struct array *arrIn2, struct array *arrOut)

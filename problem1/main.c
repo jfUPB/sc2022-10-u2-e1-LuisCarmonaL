@@ -41,14 +41,12 @@ int numeroUsuario = 0;
 scanf ("%d",&numeroUsuario);
 parr->size = numeroUsuario;
 
-//pasar los caracteres a enteros(Ej 7)
 int conNumero [numeroUsuario];
 parr->pdata = malloc(sizeof(int)*parr->size);
 
-//Ciclo for(Ej 13)
-for(int i = 0; i < numeroUsuario; i++){
+for(int i = 0; i<numeroUsuario;i++){
     int num
-    scanf("%d", &num[i]);
+    scanf("%d", &num);
     conNumero[i]=num;
     parr->pdata[i]=conNumero[i];
     

@@ -55,7 +55,20 @@ for(int i = 0; i<numeroUsuario;i++){
 
 void arrayCommon(struct array *arrIn1, struct array *arrIn2, struct array *arrOut)
 {
+    int datos[20];
+    int datoPosicion = 0;
     
+    arrOut->pdata = 0;
+
+    for(i = 0; i < arrIn1->size; i++){
+        for(j = 0; j < arrIn2->size; j++){
+            if(*(arrIn1->pdata+i)== *(arrIn2->pdata+i)){
+
+            }
+        }
+    }
+
+    arrOut->size = datoPosicion;
 }
 
 void freeMemory(struct array *arr1, struct array *arr2, struct array *arr3)

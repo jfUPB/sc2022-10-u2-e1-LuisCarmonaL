@@ -56,25 +56,25 @@ for(int i = 0; i<numeroUsuario;i++){
 void arrayCommon(struct array *arrIn1, struct array *arrIn2, struct array *arrOut)
 {
     int datoPosicion = 0, i, j, h, l = 0;
-    
-    arrOut->pdata = 0;
+        
+    arrOut->pdata = malloc(10);
 
-    for(i = 0; i < arrIn1->size; i++){
-        for( j = 0; j < arrIn2->size; j++){
-            if(*(arrIn1->pdata+i)== *(arrIn2->pdata+i)){
-                for (h = 0; h< datoPosicion; h++){
-                    if(*(arrOut->pdata+h) = *(arrIn1->pdata+i));
-                    l = 1;
+    for(i = 0; i < arrIn1->size; i++){       
+        for(j = 0; j < arrIn2->size; j++){
+            if(*(arrIn1->pdata+i) == *(arrIn2->pdata+j)){
+                for(h = 0; h < datoPosicion; h++){
+                    if(*(arrOut->pdata+h) == *(arrIn1->pdata+i)){
+                        l = 1;
+                    }
                 }
+                if(l != 1){
+                    *(arrOut->pdata+datoPosicion) = *(arrIn1->pdata+i);
+                    datoPosicion++;                 
+                }
+                l = 0;               
             }
-            if (l !=1){
-                *(arrOut->pdata+datoPosicion) = *(arrIn1->pdata+i);
-                datoPosicion++;
-            }
-            l = 0;
         }
     }
-
     arrOut->size = datoPosicion;
 }
 
